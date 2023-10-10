@@ -46,13 +46,6 @@ class branchInfo:
     def print(self):
         print( "  ",self.branch.name,  self.message, self.shouldDelete)
 
-    shouldDelete: bool = False
-    message : str = ""
-    branch = None
-
-
-
-
 def search(r, branch) :
     hcommit = branch.commit
     minDiffSize = 100
