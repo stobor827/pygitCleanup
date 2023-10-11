@@ -39,6 +39,9 @@ r.remotes[0].fetch(prune=True)
 
 class branchInfo:
     def __init__(self, shouldDelete, message, branch):
+        if( (branch.name == r.active_branch.name) ):
+            shouldDelete = False
+            message = "currently checked out (" + message + ")"
         self.shouldDelete = shouldDelete
         self.message = message
         self.branch = branch
